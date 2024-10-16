@@ -1,0 +1,120 @@
+/*ce style serra appliqué a tous leq elements de 
+notre site jusqu'à ce que nous modifions 
+les differentesparties de notresite*/
+*{
+	padding: 0;
+	margin: 0;
+	font-family: arial, algerian;
+}
+
+body{
+	background-image: url(./image/casio.jpg) ;
+	background-size:cover;
+	height: 100vh;
+	background-position: center;
+	}
+/*	cette partie est appliqué uniquement au logo*/
+.logo{
+	top: 15px;
+	left: 50px;
+	position: absolute;
+	line-height: 35px;
+	border: 1px solid #fff ;
+	border-radius: 25px;
+	padding: 10px 10px;
+	font-size: 35px;
+	font-family: algerian;
+	font-weight: bold;
+}
+/*ce style sera appliqué lorsque le curseur de la 
+souris passera sur notre logo*/
+.logo:hover{
+	background: white;
+	font-weight: 400;
+	font-family: Magneto;
+}
+/*cette partie est pour tout les elements qui 
+se trouventdans l'elément ul*/
+ul{
+	margin-top: 20px;
+   float: right;
+   text-decoration: none;
+   list-style: none;
+    }
+/*cette modificaton va s'appliquer a tous les menu 
+c'est important de le mettre sinon les menu seront
+placé de facon vertical    */
+ .nav{
+ 	display: flex;
+ 	}
+/* cette partie est uniquement pour la classe
+accueil qui est appliqué uniquement a la partie
+accueil de notre site	*/
+ 	 .accueil{
+ 	margin-right: 30px;
+ 	text-decoration: none;
+ 	color: black;
+ 	background: white;
+ 	 border-radius: 25px;
+ 	 padding: 5px 8px;
+}
+/*cette partie est mis pour appliqué le style qui sont
+dans les balise a qui se trouvent dans les balises li.
+ces balises li qui se trouvent à leur tour dans la balise 
+ul*/
+ul li a{
+	margin-right: 20px;
+ 	text-decoration: none;
+ 	color: black;
+ 	font-weight: 500px;
+	transition: 0,65 eax ;
+	border: 1px solid transparent;
+	padding: 5px 8px;
+	font-family: algerian;
+}
+
+ul li a:hover{
+ 	background: white;
+ 	 border-radius: 25px;
+}
+/*cette partie est mis pour nos bouton qui se trouvent
+entre l'elément body*/
+.bouton{
+	text-align: center;
+	
+}
+/*cette partie est uniquement pour l'element h1 qui se trouve
+dans notre body plus precisement dans la classe bouton*/
+  h1{
+	font-size:30px;
+	font-family: algerian;
+	color: skyblue;
+	font-weight: 400px;
+	margin-bottom: 10px;
+}
+main{
+	text-align: center;
+	position: relative;
+    top: 300px;
+	
+
+	}
+.btt{
+	font-family:  algerian;
+	color: black;
+	text-decoration: none;
+	border: 1px solid #FFF;
+	padding: 10px 12px;
+	border-radius: 25px;
+	font-size: 25px;
+	font-weight: 200px;
+
+}
+.btt:hover{
+	background: white;
+	color: black;
+}
+
+:root{
+	--main--:#456;
+}

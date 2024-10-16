@@ -1,0 +1,929 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: arial;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear; 
+	list-style: none;
+}
+:root{
+	--main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#1d2e3d;
+    --border:.1rem solid rgba(255,255,255,.3);
+	--main-color1:#564;
+	--border:1px solid white;
+	--hd:1px solid transparent;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .2rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;    
+}
+
+body{
+	background:#1d2e3d ;
+	border: 2px solid #1d2e3d ;
+	border-bottom: 1px solid transparent;
+	border-top: 1px solid transparent;
+	border-left-width:10Px ;
+	border-right-width:10px
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 9%;
+    border-bottom: var(--border);
+
+    
+}
+header{
+	top: 0px;
+	left: 15px;
+    position: fixed;
+	align-self: auto;
+	
+}
+.header .navbar{
+	margin-left:240px;
+	margin-right: 130px;
+}
+
+.header .navbar a{
+   margin: 0 1rem;
+   font-size: 1rem;
+   color: #ffff;
+   
+}
+.logo a{
+    color: #fff ;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+	line-height: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    text-shadow: rgba(0,0,0,0.7);
+    font-size: 1.5rem;
+}
+    
+    .logo span{
+    color: rgb(238,56,11);
+    font-weight: bold;
+    font-size: 2rem;
+    
+    }
+ .logo .orange{
+     color: orange;
+	 font-size: 16px;
+	 font-family: 'Bauhaus 93';
+	 
+}
+.logo #blanc{
+	color: white;
+	font-size: 16px;
+	font-family: 'Bauhaus 93';
+	
+}
+   .logo #vert{
+	color: green;
+	font-size: 16px;
+	font-family: 'Bauhaus 93';
+	
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top:90px; 
+    right: 70px;
+    background:#fff;
+    width: 20rem;
+    height:3rem;
+    display:flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+
+}/* Cette partie permet d'agrandire notre input lorsque nous allons cliquer 
+sur l'icone de recherche*/
+
+.header .search-form input{
+    height: 48px;
+    width: 700px;
+    font-size: 1rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right:20px;
+    color: var(--black);   
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+}
+
+.header .cart-items-container{
+    position: absolute;
+    top: 85px;
+	 right: -100%; 
+    height: 100px;
+    width: 200px;
+    background:#fff;
+    padding: 0px 0px 0px 0px;  
+}
+
+.header .cart-items-container.active{
+    right: 0px;
+    height: 300px;
+}/* Cette partie permet de faire apparaitre notre deuxième menu , losque nous allons 
+cliquer sur notre menu Hambeurger(menu à triples bars)*/
+
+.header .cart-items-container  .navbar a{
+	color: var(--black);
+	display: block;
+	margin: 1rem;
+	padding: 10px;
+	font-size: 1rem;
+}
+
+
+.premier{
+	display: inline-flex;
+}
+ .presentation h1{
+	text-align: center;
+	font-family: magneto;
+}
+/*cette partie va permettre d'encadrer les photo
+ansi que tout les detaille des photos */
+.case{
+   margin: 40px 0px 20px 30px;
+	border: 1px solid white;
+	padding: 30px 30px 60px 30px;
+} 
+/*cette partie est reserve au nom des differentres montres*/
+ .case p {
+	font-family: sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 100%;
+	color: inherit;
+}
+
+/*cette partie permet d'entourer les photos et 
+leurs detail d'une autre couleur d'encadrement*/
+.contour1{
+	background:  #1065;
+	padding: 160px 0px 89px 60px;
+	color: white;
+}
+.contour2{
+	background: #1115 ;
+	padding: 160px 0px 89px 60px;
+	color: wheat;
+}
+.contour3{
+	background: #4a9d9c;
+	padding: 160px 0px 89px 60px;
+	color: black;
+}
+.contour4{
+	background: #456;
+	padding: 160px 0px 89px 60px;
+	color: black;
+}
+.contour5{
+	background:  #765 ;
+	padding: 160px 0px 89px 60px;
+	color:white ;
+}
+.contour6{
+	background: #0976;
+	padding: 160px 0px 89px 60px;
+	color: black;
+}
+/* fin de la deuxieme encadrement */
+
+/* nous allons commencer a dnner les different couleur
+de montres dont nous disposons  */
+.couleur11   /* couleur11 represente la premier 
+couleur de le premiere montre et ces de même pour le
+reste */   
+{
+    border: 2px solid blue;
+    padding: 0px 10px 0px 10px;
+	background: blue;
+	border-radius: 50px;
+	color: blue;
+	cursor: pointer;
+}
+.couleur21{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background: red;
+	border-radius: 50px;
+	color: red;
+	cursor: pointer;
+}
+.couleur31{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background: white;
+	border-radius: 50px;
+	color: white;
+	cursor: pointer;
+}
+.couleur12{
+    border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background: black;
+	border-radius: 50px;
+	color: black;
+	cursor: pointer;
+}
+.couleur22{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background: blue;
+	border-radius: 50px;
+	color: blue;
+	cursor: pointer;
+}
+.couleur32{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background: chartreuse;
+	border-radius: 50px;
+	color: chartreuse;
+	cursor: pointer;
+}
+.couleur42{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background: white;
+	border-radius: 50px;
+	color: white;
+	cursor: pointer;
+}
+.couleur13{
+    border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background: blue;
+	border-radius: 50px;
+	color: blue;
+	cursor: pointer;
+}
+.couleur23{
+    border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background: white;
+	border-radius: 50px;
+	color: white;
+	cursor: pointer;
+}
+.couleur33{
+    border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:#000 ;
+	border-radius: 50px;
+	color:black ;
+	cursor: pointer;
+}
+.couleur14{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:gold ;
+	border-radius: 50px;
+	color:gold ;
+	cursor: pointer;
+}
+.couleur24{
+    border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:#000 ;
+	border-radius: 50px;
+	color:black ;
+	cursor: pointer;
+}
+.couleur34{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:#fff ;
+	border-radius: 50px;
+	color:white ;
+	cursor: pointer;
+}
+.couleur15{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:#000;
+	border-radius: 50px;
+	color:#000 ;
+	cursor: pointer;
+}
+.couleur25{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:blue ;
+	border-radius: 50px;
+	color:blue ;
+	cursor: pointer;
+}
+.couleur35{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:#fff ;
+	border-radius: 50px;
+	color:white ;
+	cursor: pointer;
+}
+.couleur16{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:silver ;
+	border-radius: 50px;
+	color:silver ;
+	cursor: pointer;
+}
+.couleur26{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:black;
+	border-radius: 50px;
+	color:black;
+	cursor: pointer;
+}
+.couleur36{
+	border: 2px solid transparent;
+    padding: 0px 10px 0px 10px;
+	background:goldenrod;
+	border-radius: 50px;
+	color:goldenrod ;
+	cursor: pointer;
+}
+/* fin de la prsentation des couleur */
+
+	img{
+	width: 200px;
+	border-radius: 25px;
+	height: 150px;
+	margin-top: 10px;
+	margin-right: 60px;		
+}
+
+
+/*cette partie est pour notre bouton qui va indiquer
+au visiteur où aller pour avoir plus de contenu*/
+button{
+	border: 1px solid transparent;
+	padding:0px 8px 0px 8px ;
+	border-radius: 25px;
+	font-size: 50px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+button a{
+	text-decoration: none;
+	color: transparent;
+}
+/*fin de la modification du bouton*/
+
+/*cette partie va servire de faire une prepentation
+des montres avec des images qui seront en animation*/
+.presentation div{
+	margin: 100px auto ;
+}
+.presentation div:hover{
+	animation-play-state: paused;
+}
+.montres{
+	background-size:contain ;
+	background-color: #ededed;
+	width:1000px;
+	height: 432px;
+	box-shadow: 0px 15px 10px -5px #777;
+	animation: fondu /* fondu est le nom de l"animation que nous allons utiliser plutart */ 30s ease-in-out infinite both;
+ 
+}
+footer{
+	color: #ededed;
+	margin: 10px 0px 3px 0px;
+	background-color:#1F3A5F;
+}
+.footer{
+	display: flex;
+	margin: 0px 0px 0px 30px;
+	
+}
+.footer ul {
+	list-style: none;
+	line-height: 40px;
+	margin-left: 90px;
+	
+}
+footer .logo li img{
+	width: 160px;
+	height: 100px;
+	border-radius: 5px;
+}
+.footer ul li i{
+   font-size: 25px;
+  cursor: pointer;
+  
+}
+.footer li h2{
+	font-family: magneto;
+	font-size: 30px;
+}
+label{
+	color: #ededed;
+	font-style: italic;
+
+}
+input{
+	cursor: pointer;
+}
+.condition{
+	margin: 0px 0px 10px 10px;
+	list-style: none;
+}
+
+@keyframes fondu {
+	0%{
+		background-image: url(./image/cartier/cartier10.jpg);
+	}
+	20%{
+		background-image: url(./image/hermes/hermes1.jpg)
+	}
+	35%{
+		background-image: url(./image/monblanc/montblanc1.jpg);
+	}
+	55%{
+		background-image: url(./image/hubblot/hubblot10.jpg);
+	}
+	75%{
+		background-image: url(./image/casio/g-shock20242.jpg);
+	}
+	90%{
+		background-image: url(./image/casio/casioquartz8.jpg);
+	}
+	100%{
+		background-image: url(./image/rolex/rolex12.jpg);
+	}
+}
+
+@media (max-width:1050px){
+	
+	
+	.case{
+	 margin: 40px 0px 20px 45px;
+	}
+	.premier{
+		flex-direction: column;
+	}
+	@media (max-width:900px){
+      .premier{
+
+	flex-direction: column;
+}
+.case{
+	 margin: 40px 0px 20px 10px;
+}
+ 
+
+
+}
+@media (max-width:700px)
+{
+	.premier{
+		justify-content: center;
+	}
+}
+}
+@media (max-width:768px){
+    h1{
+    	font-size: 20px;
+    }
+    .montres{
+    	width:430px ;
+    	height: 267px;
+    }
+     .case p {
+	font-family: sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 15px;
+	color: inherit;
+}
+.case{
+   margin: 40px 0px 20px 0px;
+	border: 1px solid white;
+	padding: 30px 30px 60px 30px;
+} 
+.premier{
+	flex-direction: column;
+}
+
+/* responsive de iphone Xr et Samsung Galaxy S20 Utra */
+ @media(max-width:414px){
+
+	button{
+		border: 1px solid transparent;
+		padding:0px 8px 0px 8px ;
+		border-radius: 5px;
+		font-size: 25px;
+		cursor: pointer;
+		background-color: green;
+		position:relative ;
+		position: fixed;
+		bottom: 30px;
+		left:180px;
+	}
+
+	button a{
+		text-decoration: none;
+		color: white;
+	}
+   
+
+	.montres{
+		background-size:contain ;
+		background-color: #ededed;
+		width:200px;
+		float: left;
+		height: 200px;
+		box-shadow: 0px 15px 10px -5px #777;
+		animation: fondu /* fondu est le nom de l"animation que nous allons utiliser plutart */ 30s ease-in-out infinite both;
+	 
+	}
+
+	.contour1{
+		background:  #1065;
+		padding: 60px 0px 89px 50px;
+		color: white;
+	}
+	.contour2{
+		background: #1115 ;
+		padding: 60px 0px 89px 60px;
+		color: wheat;
+	}
+	.contour3{
+		background: #4a9d9c;
+		padding: 60px 0px 89px 60px;
+		color: black;
+	}
+	.contour4{
+		background: #456;
+		padding: 60px 0px 89px 60px;
+		color: black;
+	}
+	.contour5{
+		background:  #765 ;
+		padding: 60px 0px 89px 60px;
+		color:white ;
+	}
+	.contour6{
+		background: #0976;
+		padding: 60px 0px 89px 60px;
+		color: black;
+	}
+	img{
+		width: 110px;
+		border-radius: 15px;
+		height: 110px;
+		margin-top: 10px;
+		margin-right: 60px;		
+	}
+
+	.case{
+		margin: 50px 0px 10px 0px;
+		 border: none;
+		 padding: 0px;
+	 } 
+	 /*cette partie est reserve au nom des differentres montres*/
+	  .case p {
+		 font-family: sans-serif;
+		 font-weight: bold;
+		 text-transform: uppercase;
+		 text-align: center;
+		 line-height: 15px;
+		 font-size: 12px;
+		 color: inherit;
+	 }
+	/*fin de la modification du bouton*/
+
+
+header ul{
+	float: left;
+	 position: relative;
+	 margin-left: 19px;
+	text-decoration: none;
+	list-style: none;
+	border: 1px solid transparent;
+	padding: 20px 0px 20px 10px;
+	 }
+
+	 header ul li a{
+		 text-decoration: none;
+		 color: white;
+		 font-weight: 500px;
+		transition: 0,65 eax ;
+		padding: 5px 8px;
+
+	}
+	
+	 header ul li a:hover{
+		 font-family:algerian ;
+		 border-bottom: .1rem solid #d3ad7f;
+	
+	}
+	header{
+		background-color: transparent;
+		height: 60px;
+		width: 235px;
+		border-bottom:2px solid white;
+	
+	
+	}
+
+	.footer{
+		display: block;
+		margin: 70px 0px 0px 0px;
+		
+	}
+	.footer ul {
+		list-style: none;
+		line-height: 40px;
+		margin: 0px;
+		color: #000;
+		
+	}
+    .condition{
+		font-size: 10px;
+	}
+	.footer ul li p {
+		font-size: 15px;
+		font-style: italic;
+		line-height: 30px;
+		color: #000;
+	}
+	.footer ul li i{
+	   font-size: 25px;
+	  cursor: pointer;
+	  color: white;
+	  
+	}
+	.footer li h2{
+		font-family: magneto;
+		font-size: 25px;
+		color: white;
+	
+	}
+	footer{
+		color: #ededed;
+		margin: 10px  0px 0px 0px;
+		background-color:#3c5981;
+		width: 220px;
+	}
+ }
+/* C'est le responsive du iphone 12 Pro */
+ @media(max-width:390px){
+	html{
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+	}
+	
+	html::-webkit-scrollbar{
+		width: .8rem;
+	}
+	
+	html::-webkit-scrollbar-track{
+		background: black;
+	}
+	
+	html::-webkit-scrollbar-thumb{
+		background: #fff;
+		border-radius: 5rem;    
+	}
+	
+	.presentation h1{
+		font-family: serif;
+		font-style: italic;
+		text-align: center;
+		font-size: 26px;
+		color: #ededed;
+	}
+
+	button{
+		border: 1px solid transparent;
+		padding:0px 8px 0px 8px ;
+		border-radius: 5px;
+		font-size: 50px;
+		cursor: pointer;
+		background-color: green;
+		position:relative ;
+		position: fixed;
+		bottom: 30px;
+		left:330px;
+	}
+
+	button a{
+		text-decoration: none;
+		color: white;
+	}
+   
+
+	.montres{
+		background-size:contain ;
+		background-color: #ededed;
+		width:440px;
+		float: left;
+		height: 250px;
+		box-shadow: 0px 15px 10px -5px #777;
+		animation: fondu /* fondu est le nom de l"animation que nous allons utiliser plutart */ 30s ease-in-out infinite both;
+	 
+	}
+
+	.contour1{
+		background:  #1065;
+		padding: 60px 0px 89px 60px;
+		color: white;
+	}
+	.contour2{
+		background: #1115 ;
+		padding: 60px 0px 89px 60px;
+		color: wheat;
+	}
+	.contour3{
+		background: #4a9d9c;
+		padding: 60px 0px 89px 60px;
+		color: black;
+	}
+	.contour4{
+		background: #456;
+		padding: 60px 0px 89px 60px;
+		color: black;
+	}
+	.contour5{
+		background:  #765 ;
+		padding: 60px 0px 89px 60px;
+		color:white ;
+	}
+	.contour6{
+		background: #0976;
+		padding: 60px 0px 89px 60px;
+		color: black;
+	}
+	img{
+		width: 200px;
+		border-radius: 15px;
+		height: 150px;
+		margin-top: 10px;
+		margin-right: 60px;		
+	}
+
+	.case{
+		margin: 30px 0px 50px 50px;
+		 border: none;
+		 padding: 0px;
+	 } 
+	 /*cette partie est reserve au nom des differentres montres*/
+	  .case p {
+		 font-family: sans-serif;
+		 font-weight: bold;
+		 text-transform: uppercase;
+		 text-align: center;
+		 line-height: 25px;
+		 font-size: 15px;
+		 color: inherit;
+	 }
+	/*fin de la modification du bouton*/
+
+
+header ul{
+	float: left;
+	 position: relative;
+	 margin-left: 19px;
+	text-decoration: none;
+	list-style: none;
+	border: 1px solid transparent;
+	padding: 20px 0px 20px 10px;
+	 }
+
+	 header ul li a{
+		 text-decoration: none;
+		 color: white;
+		 font-weight: 500px;
+		transition: 0,65 eax ;
+		padding: 5px 8px;
+
+	}
+	
+	 header ul li a:hover{
+		 font-family:algerian ;
+		 border-bottom: .1rem solid #d3ad7f;
+	
+	}
+	header{
+		background-color: transparent;
+		height: 60px;
+		width: 235px;
+		border-bottom:2px solid white;
+	
+	
+	}
+
+	.footer{
+		display: block;
+		margin: 0px 0px 0px 18px;
+		
+	}
+	.footer ul {
+		list-style: none;
+		line-height: 40px;
+		margin-left: 0px;
+		color: #000;
+		
+	}
+    .condition{
+		font-size: 25px;
+	}
+	.footer ul li p {
+		font-size: 26px;
+		font-style: italic;
+		line-height: 30px;
+		color: #000;
+	}
+	.footer ul li i{
+	   font-size: 25px;
+	  cursor: pointer;
+	  color: white;
+	  
+	}
+	.footer li h2{
+		font-family: magneto;
+		font-size: 30px;
+		color: white;
+	
+	}
+	footer{
+		color: #ededed;
+		margin: 10px 0px 3px 0px;
+		background-color:#3c5981;
+		width: 390px;
+	}
+ }
+ 
+
+ }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+
+    <style>
+        label{
+            display: inline-block;
+            min-width: 200px;
+        }
+        input{
+            border: 1px solid black;
+            margin-top: 10px;
+        
+        }
+        #canvas1,#canvas8,#canvas9,#canvas2,#canvas3,#canvas4,#canvas5,#canvas6,#canvas7{
+            border: 1px solid orange;
+            border-width: 10px;
+
+        }
+        #image1{
+            display: none;
+        }
+        #defile img{
+            width: 300px;
+            height: 200px;
+            margin-left: 100px;
+        }
+
+        #defile{
+            display: inline-flex;
+            overflow: hidden;
+            width: 1500px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <p>Engagez vous qu'il disaient, rengagez vous qu'il disaient</p>
+     <p id="reg"></p>
+     <p id="search"></p>
+     <p class="remplacement"></p>
+     <p id="test"></p>
+
+
+     <button id="charger" title="chr">actualiser</button>
+    <form method="post" action="traitement.php">
+        <label>Entrez votre nom et prenom*</label>
+        <input type="text" id="prenom"  name='nom' placeholder="Nom et Prenom" required="required" maxlength="20"/>
+          <span id="manque"></span><br>
+        <label>Email*</label>
+        <input type="email" id="email" name='email'placeholder="Example@gmail.com" required="required"/><br>
+        
+        <label>Entrez votre numero*</label>
+        <input type="tel" id="tel"  name='tel' placeholder="00 00 00 00 00" required="required" maxlength="10"/> 
+        <span id="telephone"></span><br>
+        <input  type="password" id="motdepasse" name="motdepasse" required/>
+        <span id="passeword"></span><br>
+        
+        <input type="submit" id="valider" value="valider" />
+        
+    </form>
+  <canvas id="canvas1" width="400px" height="200px"></canvas>
+  <canvas id="canvas2" width="400px" height="200px"></canvas><br>
+    <canvas id="canvas3" width="400px" height="200px"></canvas>
+
+    <canvas id="canvas4" width="400px" height="200px"></canvas>
+  
+    <br><canvas id="canvas5" width="400px" height="200px"></canvas>
+    <img src="./image/cartier.jpg" title="cartier" id="image1">
+    <canvas id="canvas6" width="600px" height="400px"></canvas>
+    <canvas id="canvas7" width="400px" height="400px"></canvas>
+   <br> <canvas id="canvas8" width="400px" height="400px"></canvas>
+   <canvas id="canvas9" width="400px" height="400px"></canvas>
+   
+   <p> Horloge actualisée en direct ! il est :<span id="heure"></span></p>
+    
+   <button id="stop"> Arrêter le temps</button>
+
+   <button id="changer">Cliquer</button>
+   <button id="avant">>></button>
+   <br>
+
+   <label for="name"> Entrez un nombre compris entre 1 et 10</label>
+   <input type="number" id="nb" name="name">
+   <button type="button"  id="test1">valider</button>
+   <p id="para"></p>
+   
+    <script src="text.js"></script>
+ 
+
+
+</body>
+</html>
