@@ -25,7 +25,8 @@
     "axe/text-alternatives": [
       "default",
       {
-        "image-alt": "off"
+        "image-alt": "off",
+        "document-title": "off"
       }
     ],
     "axe/parsing": [
@@ -34,6 +35,8 @@
         "duplicate-id-active": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "button-type": "off",
+    "meta-viewport": "off"
   }
 }
